@@ -3,133 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Salomé Marín Perdomo</title>
-   <!-- <style>
-        /* Esto hace que al hacer clic en el índice, la página baje suavemente */
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #e9e5de; /* El color de fondo de tu Canva */
-            color: #333;
-        }
-        section {
-            padding: 60px 20px;
-            border-bottom: 1px solid #ccc;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            margin: 10px 0;
-        }
-        nav a {
-            text-decoration: none;
-            color: #4a5568;
-            font-weight: bold;
-        }
-        form {
-            display: grid;
-            max-width: 400px;
-            gap: 10px;
-        }
-    </style>-->
+    <title>Portfolio Profesional - Salomé Marín Perdomo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header id="inicio">
-        <h1>PORTFOLIO</h1>
-        <h2>SALOMÉ MARÍN PERDOMO</h2>
+    <div class="portfolio-container">
         
-        <nav>
-            <ul>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#educacion">Educación / Experiencia</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#footer">Footer</a></li>
-            </ul>
-        </nav>
-    </header>
+        <header class="columna-fija">
+            <div class="bloque-fijo">
+                <span class="tag-tecnico">CV DIGITAL</span>
+                <h1>PORTFOLIO</h1>
+                <h2>SALOMÉ MARÍN PERDOMO</h2>
+                
+                <img src="img/fotoperfil.jpeg" alt="Salomé Marín - Técnico en Informática" class="foto-perfil">
 
-    <section id="sobre-mi">
-        <h2>SOBRE MÍ</h2>
-        <figure> <img  alt src="fotoperfil.jpeg"></figure>
-        <p>¡Hola! Soy Salomé, futura Técnico en Informática. Actualmente curso el último año de mi formación técnica, donde he desarrollado habilidades en la creación de sitios web y configuración de sistemas. Me apasiona resolver problemas técnicos y estoy lista para dar mis primeros pasos en el mundo laboral, aportando compromiso y capacidad de aprendizaje continuo.</p>
-    </section>
+                <nav id="menus">
+                    <ul>
+                        <li><a href="#sobre-mi">Sobre mí</a></li>
+                        <li><a href="#educacion">Educación / Experiencia</a></li>
+                        <li><a href="#habilidades">Habilidades</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    <section id="educacion">
-        <h2>EDUCACIÓN</h2>
-        <ul>
-            <li><strong>Primaria:</strong> Hecha en Colombia (2012-2018)</li>
-            <li><strong>Secundaria:</strong> Escuela Técnica N°10 Martin Miguel de Güemes (en curso de finalizar)</li>
-        </ul>
+        <main class="contenedor-horizontal">
+            
+            <section id="sobre-mi" class="diapositiva-canva">
+                <div class="cuadro-contenido">
+                    <span class="numero-slide">01</span>
+                    <h2>SOBRE MÍ</h2>
+                    <p>¡Hola! Soy Salomé, tengo 18 años futura <strong>Técnico en Informática Profesional y Personal</strong>. Actualmente curso el último año de mi formación técnica en la <em>Escuela Técnica N°10 Martin Miguel de Güemes</em>. Me apasiona resolver problemas técnicos y estoy lista para dar mis primeros pasos en el mundo laboral, aportando compromiso y capacidad de aprendizaje continuo.</p>
+                </div>
+            </section>
 
-        <h2>EXPERIENCIA</h2>
-        <ul>
-            <li>Solo experiencia técnica básica.</li>
-        </ul>
-    </section>
+            <section id="educacion" class="diapositiva-canva">
+                <div class="cuadro-contenido">
+                    <span class="numero-slide">02</span>
+                    <h2>EDUCACIÓN / EXPERIENCIA</h2>
+                    <h3>Formación Académica</h3>
+                    <ul>
+                        <li><strong>Primaria:</strong> Realizada en Colombia (2012-2018).</li>
+                        <li><strong>Secundaria:</strong> Escuela Técnica N°10 Martin Miguel de Güemes (En curso de finalización).</li>
+                    </ul>
 
-    <section id="habilidades">
-        <h2>HABILIDADES</h2>
-        <p>Mis habilidades básicas son las que tuve obteniendo conforme fue pasando los años en la secundaria, que alguna de estas es:</p>
-        <ul>
-            <li>Diseño de sitio web</li>
-            <li>Programación (básica)</li>
-            <li>Configuración de routers</li>
-            <li>Mantenimiento de Hardware y Software</li>
-        </ul>
-    </section>
+                    <h3>Experiencia</h3>
+                    <ul>
+                        <li>Experiencia técnica básica adquirida durante la formación escolar y prácticas profesionalizantes.</li>
+                    </ul>
+                </div>
+            </section>
 
-    <section id="proyectos">
-        <h2>PROYECTOS</h2>
-        <p>Terminar los proyectos cursando mi último año de secundaria, como:</p>
-        <ul>
-            <li>Terminar proyecto finales, olimpiadas (Robot WALL-E)</li>
-            <li>Terminar las practicas profesionalizantes</li>
-        </ul>
-    </section>
+            <section id="habilidades" class="diapositiva-canva">
+                <div class="cuadro-contenido">
+                    <span class="numero-slide">03</span>
+                    <h2>HABILIDADES TÉCNICAS</h2>
+                    <p>Conocimientos técnicos desarrollados durante la tecnicatura:</p>
+                    <ul class="lista-habilidades">
+                        <li>Diseño y maquetación de sitios web.</li>
+                        <li>Lógica de programación básica.</li>
+                        <li>Configuración y mantenimiento de routers.</li>
+                        <li>Soporte técnico de Hardware y Software.</li>
+                        <li>Manejo de aplicaciones de oficina (Libre Office, Word, Power Point, etc..</li>                    </ul>
+                </div>
+            </section>
 
-    <section id="contacto">
-        <h2>CONTACTO</h2>
-        <p>Número de teléfono: 2664680101</p>
-        <p>Correo electrónico: salomemarinperdomo@gmail.com</p>
+            <section id="proyectos" class="diapositiva-canva">
+                <div class="cuadro-contenido">
+                    <span class="numero-slide">04</span>
+                    <h2>PROYECTOS</h2>
+                    <p>Desarrollos destacados de 7mo año:</p>
+                    <ul>
+                        <li>Robot WALL-E (Olimpiadas de Robótica).</li>
+                        <li>Prácticas Profesionalizantes externas.</li>
+                        <li>Desarrollo de HTML</li>
+                    </ul>
+                    
+                    <div class="contenedor-video">
+                        <iframe 
+                            src="https://www.youtube.com/embed/EvKm8yhM7V8" 
+                            title="Video de Referencia Técnica" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
 
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            <section id="contacto" class="diapositiva-canva">
+                <div class="cuadro-contenido">
+                    <span class="numero-slide">05</span>
+                    <h2>CONTACTO</h2>
+                    <p><strong>Teléfono:</strong> 2664680101</p>
+                    <p><strong>Email:</strong> salomemarinperdomo@gmail.com</p>
 
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="mail@ejemplo.com" required>
+                    <form class="formulario-contacto">
+                        <div class="grupo-input">
+                            <label for="nombre">Nombre Completo:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
 
-            <label for="motivo">Motivo de contacto:</label>
-            <select id="motivo" name="motivo">
-                <option value="trabajo">Oferta laboral</option>
-                <option value="consulta">Consulta técnica</option>
-                <option value="otro">Otro</option>
-            </select>
+                        <div class="grupo-input">
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" placeholder="mail@ejemplo.com" required>
+                        </div>
 
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                        <div class="grupo-input">
+                            <label for="motivo">Motivo:</label>
+                            <select id="motivo" name="motivo">
+                                <option value="trabajo">Oferta laboral</option>
+                                <option value="consulta">Consulta técnica</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
 
-            <button type="submit">Enviar mensaje</button>
-        </form>
-    </section>
+                        <div class="grupo-input">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="3" placeholder="Escribe aquí..."></textarea>
+                        </div>
 
-    <footer id="footer">
-        <h2>FOOTER</h2>
-        <p>Correo adicional: salomemarin@sanluis.edu.ar</p>
-        <p>Dato adicional: Nacionalidad colombiana</p>
-        <p><strong>GRACIAS</strong></p>
-        <p><a href="#inicio">Volver arriba</a></p>
-    </footer>
+                        <button type="submit">Enviar Propuesta</button>
+                    </form>
+                </div>
+            </section>
+
+            <footer id="footer" class="diapositiva-canva footer-final">
+                <div class="cuadro-contenido text-center">
+                    <h2>MÁS INFORMACIÓN</h2>
+                    <p><strong>Correo Institucional:</strong> salomemarin@sanluis.edu.ar</p>
+                    <p>San Luis, Argentina | 2026</p>
+                    <h1 class="gracias-final">GRACIAS</h1>
+                </div>
+            </footer>
+
+        </main>
+    </div>
 
 </body>
 </html>
