@@ -1,4 +1,4 @@
-# Portfolio / CV Digital — [Salome Marin]
+/* Variables de Tipografía pedidas */# Portfolio / CV Digital — [Salome Marin]
 ## Descripcion
 Portfolio personal desarrollado con HTML5 semantico.
 Proyecto de la materia Adaptacion al Ambiente de Trabajo (7mo año).
