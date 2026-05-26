@@ -1,128 +1,242 @@
-   /* --- CONFIGURACIÓN DE COLORES Y ESTILO --- */
-        :root {
-            --cafe-oscuro: #5D4037;
-            --cafe-medio: #8D6E63;
-            --beige: #D7CCC8;
-            --crema: #F5F5DC;
-            --blanco: #FFFFFF;
-            --texto: #3E2723;
-        }
+/* --- VARIABLES CSS (PALETA Y FUENTES) --- */
+:root {
+    --cafe-oscuro: #023981;
+    --cafe-medio: #8D6E63;
+    --beige: #b8afac;
+    --crema: #e9e5de; 
+    --blanco-puro: #ccc5c5;
+    --texto: #333333;
+    
+    
+    --font-titulos: "Instrument Serif", serif;
+    --font-general: Arial, sans-serif;
+}
 
-        html { scroll-behavior: smooth; }
+/* --- CLASES ESPECÍFICAS DE GOOGLE FONTS --- */
+.instrument-serif-regular {
+  font-family: var(--font-titulos);
+  font-weight: 400;
+  font-style: normal;
+}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Verdana, Geneva, Tahoma, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            background-color: var(--crema);
-            color: var(--texto);
-        }
+.instrument-serif-regular-italic {
+  font-family: var(--font-titulos);
+  font-weight: 400;
+  font-style: italic;
+}
 
-       
-        header {
-            background-color: var(--cafe-oscuro);
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+/* --- RESET Y CONFIGURACIÓN BÁSICA --- */
+html {
+    scroll-behavior: smooth;
+}
 
-        header h1 { margin: 0; letter-spacing: 2px; }
-        header h2 { font-weight: 300; font-size: 1.2rem; margin-top: 10px; color: var(--beige); }
+body {
+    font-family: var(--font-general); /* Arial asignada como fuente general */
+    margin: 0;
+    padding: 0;
+    background-color: var(--crema);
+    color: var(--texto);
+    overflow: hidden; 
+}
 
-        nav ul {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            list-style: none;
-            padding: 20px 0 0 0;
-            flex-wrap: wrap;
-        }
+/* --- ESTRUCTURA FLEXBOX HORIZONTAL --- */
+.portfolio-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
 
-        nav a {
-            text-decoration: none;
-            color: var(--beige);
-            font-weight: bold;
-            transition: 0.3s;
-        }
+/* --- COLUMNA IZQUIERDA FIJA --- */
+.columna-fija {
+    flex: 0 0 320px; 
+    background-color: var(--crema);
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    z-index: 10;
+}
 
-        nav a:hover { color: white; }
+.tag-tecnico {
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--cafe-medio);
+}
 
-        
-        main {
-            max-width: 850px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+.columna-fija h1 {
+    font-size: 3.2rem; /* Subido un poco porque Instrument Serif es más estilizada */
+    color: var(--cafe-oscuro);
+    margin: 0;
+    line-height: 1;
+}
 
-        section {
-            background-color: var(--blanco);
-            margin-bottom: 30px;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(93, 64, 55, 0.08);
-            border-top: 6px solid var(--cafe-medio);
-        }
+.columna-fija h2 {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: var(--texto);
+    margin-top: 10px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
 
-        h2 {
-            color: var(--cafe-oscuro);
-            border-bottom: 2px solid var(--beige);
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
+/* Foto de Perfil Circular */
+.foto-perfil {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--blanco-puro);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
 
-        /* --- FOTO DE PERFIL --- */
-        .foto-perfil {
-            width: 180px; /* Aquí puedes editar el tamaño */
-            height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid var(--beige);
-            display: block;
-            margin: 0 auto 20px auto;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+/* Menú de Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-        /* --- FORMULARIO ESTILIZADO --- */
-        form {
-            display: grid;
-            gap: 15px;
-            margin-top: 20px;
-            background-color: #fafafa;
-            padding: 20px;
-            border-radius: 10px;
-        }
+nav li { margin: 15px 0; }
 
-        label { font-weight: bold; color: var(--cafe-oscuro); }
+nav a {
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: bold;
+    transition: 0.3s ease;
+}
 
-        input, select, textarea {
-            padding: 10px;
-            border: 1px solid var(--beige);
-            border-radius: 5px;
-            width: 100%;
-            box-sizing: border-box;
-        }
+nav a:hover {
+    color: var(--cafe-oscuro);
+    padding-left: 10px;
+}
 
-        button {
-            background-color: var(--cafe-oscuro);
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+/* --- CONTENEDOR DE DIAPOSITIVAS (HORIZONTAL) --- */
+.contenedor-horizontal {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory; 
+    background-color: #f7f6f2;
+}
 
-        button:hover { background-color: var(--cafe-medio); }
+.diapositiva-canva {
+    flex: 0 0 100%; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
 
-        /* --- PIE DE PÁGINA --- */
-        footer {
-            text-align: center;
-            padding: 40px;
-            background-color: var(--cafe-oscuro);
-            color: var(--beige);
-            margin-top: 50px;
-        }
+/* Cuadros Formales de Contenido */
+.cuadro-contenido {
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--blanco-puro);
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(93, 64, 55, 0.07);
+    border-top: 8px solid var(--cafe-medio);
+    position: relative;
+    max-height: 85vh;
+    overflow-y: auto;
+}
 
-        footer a { color: white; text-decoration: none; font-size: 0.9rem; }
+.numero-slide {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-weight: bold;
+    color: var(--beige);
+    font-size: 1.5rem;
+}
+
+h2 { 
+    color: var(--cafe-oscuro); 
+    border-bottom: 2px solid var(--beige); 
+    padding-bottom: 10px;
+    font-size: 2.2rem;
+}
+
+h3 { 
+    font-size: 1.6rem;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+ul { padding-left: 20px; }
+li { margin-bottom: 10px; }
+
+/* --- VIDEO DE YOUTUBE ADAPTATIVO --- */
+.contenedor-video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    margin-top: 25px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(172, 171, 171, 0.1);
+}
+
+.contenedor-video iframe {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%; border: none;
+}
+
+/* --- FORMULARIO REDISEÑADO --- */
+form {
+    display: grid;
+    gap: 15px;
+    background-color: var(--crema);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.grupo-input { display: flex; flex-direction: column; gap: 5px; }
+
+label { font-weight: bold; font-size: 0.9rem; color: var(--cafe-oscuro); }
+
+input, select, textarea {
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    background-color: var(--blanco-puro);
+    font-family: var(--font-general);
+}
+
+button {
+    background-color: var(--cafe-oscuro);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: var(--font-general);
+}
+
+button:hover { background-color: var(--cafe-medio); }
+
+/* Pantalla final */
+.text-center { text-align: center; }
+.gracias-final { font-size: 5rem; color: var(--cafe-oscuro); letter-spacing: 10px; margin-top: 20px; }
+
+/* --- DISEÑO RESPONSIVO --- */
+@media (max-width: 900px) {
+    body { overflow-y: auto; }
+    .portfolio-container { flex-direction: column; height: auto; }
+    .columna-fija { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid #ccc; }
+    .contenedor-horizontal { flex-direction: column; overflow-x: hidden; height: auto; }
+    .diapositiva-canva { flex: 0 0 auto; width: 100%; height: auto; padding: 20px; }
+    .cuadro-contenido { max-height: none; }
+}
